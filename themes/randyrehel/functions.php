@@ -139,8 +139,11 @@ add_action( 'widgets_init', 'randyrehel_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+
 function randyrehel_scripts() {
 	wp_enqueue_style( 'randyrehel-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'randyrehel-style', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', false ); 
 	wp_style_add_data( 'randyrehel-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'randyrehel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

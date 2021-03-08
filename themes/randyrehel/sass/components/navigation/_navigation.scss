@@ -2,6 +2,8 @@
 	display: block;
 	width: 100%;
 
+	background: black;
+
 	ul {
 		display: none;
 		list-style: none;
@@ -70,11 +72,17 @@
 }
 
 /* Small menu. */
+.menu-toggle{
+	padding: 0;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
+
+//----------------Tablet Menu----------------------------
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
@@ -83,6 +91,7 @@
 
 	.main-navigation ul {
 		display: flex;
+		justify-content: space-around;
 	}
 }
 

@@ -394,7 +394,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -543,6 +543,26 @@ a:hover, a:active {
   outline: 0;
 }
 
+.main-navigation a {
+  color: #ff9900;
+}
+
+.main-navigation a:visited {
+  color: #e21111;
+}
+
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: #ffbb00;
+}
+
+.main-navigation a:focus {
+  outline: thin dotted;
+}
+
+.main-navigation a:hover, .main-navigation a:active {
+  outline: 0;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -647,6 +667,7 @@ textarea {
 .main-navigation {
   display: block;
   width: 100%;
+  background: black;
 }
 
 .main-navigation ul {
@@ -696,6 +717,10 @@ textarea {
 }
 
 /* Small menu. */
+.menu-toggle {
+  padding: 0;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -709,6 +734,8 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -972,6 +999,36 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+html::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #eeb71e;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 48% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 48% 0, 100% 100%, 0% 100%);
+  /* 
+    @include media-desktop{
+            clip-path: polygon(85% 0, 100% 0, 100% 100%, 67% 100%);
+        } */
+}
+
+body.home .site-title {
+  font-size: 3rem;
 }
 
 .site {

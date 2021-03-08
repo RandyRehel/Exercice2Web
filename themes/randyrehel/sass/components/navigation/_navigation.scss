@@ -2,8 +2,6 @@
 	display: block;
 	width: 100%;
 
-	background: black;
-
 	ul {
 		display: none;
 		list-style: none;
@@ -74,11 +72,30 @@
 /* Small menu. */
 .menu-toggle{
 	padding: 0;
+	transition: transform 0.75s;
+	transform: translate(0) rotate(0deg);
+}
+
+.main-navigation.toggled .menu-toggle{
+	transform: translateX(3rem) rotate(1080deg);
 }
 
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.main-navigation.toggled ul{
+	width: 30%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.main-navigation.toggled ul li{
+	border: 2px solid rgb(204, 121, 26);
 }
 
 
@@ -89,9 +106,18 @@
 		display: none;
 	}
 
+	.main-navigation{
+		background: black;
+	}
 	.main-navigation ul {
+		height: 3rem;
+		font-size: 1.5rem;
 		display: flex;
 		justify-content: space-around;
+		
+		li{
+			padding-top: 1.5rem;
+		}
 	}
 }
 

@@ -4,22 +4,22 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: rgb(238, 141, 30);
     font-family: $font__main;
 }
 
-body:after{
+body.home::after{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 200vh;
     content: '';
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:rgb(238, 141, 30);
+    background-color: #fff;
     z-index:  -1;
-    clip-path: polygon(0 0, 48% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(49% 0, 100% 0, 100% 100%, 100% 100%);
     
    /*  @include media-desktop{
             clip-path: polygon(85% 0, 100% 0, 100% 100%, 67% 100%);
@@ -29,6 +29,9 @@ body:after{
 
 
 body.home{
+
+    height: 200vh;
+    width: 100vw;
     .site-title{
         text-align: center;
         font-size: 3rem;
